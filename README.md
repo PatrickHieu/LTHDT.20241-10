@@ -1,5 +1,6 @@
 # LTHDT.20241-10
 Mini Project OOP
+
 Nhóm chúng em bao gồm 5 thành viên:
 - Nguyễn Thanh Hiếu - 20225716
 - Nguyễn Minh Hiếu - 20225626
