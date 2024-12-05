@@ -15,7 +15,7 @@ public class CircuitAnalyzer {
         }
     }
 
-    public static void analyzeParalle(Circuit circuit, double sourceVoltage) {
+    public static void analyzeParallel(Circuit circuit, double sourceVoltage) {
         double req = circuit.calculateER();
         double current = sourceVoltage / req;
         System.out.println("Current: " + current);
