@@ -6,8 +6,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Circuit {
-    private List<CircuitElement> elements;
-    private String circuitType;
+    private final List<CircuitElement> elements;
+    private final String circuitType;
 
     public Circuit(String circuitType) {
         this.elements = new ArrayList<>();
