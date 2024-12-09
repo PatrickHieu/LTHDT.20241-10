@@ -1,4 +1,4 @@
-package elements;
+package src.elements;
 
 public class Capacitor extends CircuitElement {
 
@@ -7,12 +7,16 @@ public class Capacitor extends CircuitElement {
     }
 
     @Override
-    public double calculateVoltage() {
-        return 0;
+    public double calculateVoltage(double voltage) {
+        // Tính trở kháng tụ điện: V = I * (1 / 2πfC)
+        double frequency = 50; 
+        return current * (-1 / (2 * Math.PI * frequency * getValue()));
     }
 
     @Override
-    public double calculateCurrent() {
-        return 0;
+    public double calculateCurrent(double current) {
+        // Tính I = V * (2πfC)
+        double frequency = 50;
+        return voltage * (2 * Math.PI * frequency * getValue());
     }
 }
