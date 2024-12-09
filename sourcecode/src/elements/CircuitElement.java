@@ -17,6 +17,6 @@ public abstract class CircuitElement {
         return value;
     }
 
-    public abstract double calculateVoltage(double voltage);
-    public abstract double calculateCurrent(double current);
+    public abstract double calculateVoltage(double current);
+    public abstract double calculateCurrent(double voltage);
 }
