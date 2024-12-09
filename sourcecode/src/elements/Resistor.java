@@ -1,4 +1,4 @@
-package elements;
+package src.elements;
 
 public class Resistor extends CircuitElement {
 
@@ -7,11 +7,11 @@ public class Resistor extends CircuitElement {
     }
 
     @Override
-    public double calculateVoltage() {
-        return getValue();
+    public double calculateVoltage(double current) {
+        return current * getValue(); // V = I * R
     }
     @Override
-    public double calculateCurrent() {
-        return getValue();
+    public double calculateCurrent(double voltage) {
+        return voltage / getValue(); // I = V / R
     }
 }
