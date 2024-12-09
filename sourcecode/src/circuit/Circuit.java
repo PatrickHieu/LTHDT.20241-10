@@ -1,6 +1,6 @@
-package circuit;
+package src.circuit;
 
-import elements.CircuitElement;
+import src.elements.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,11 +15,18 @@ public class Circuit {
     }
 
     public void addElement (CircuitElement element) {
-        elements.add(element);
+        if (elements.size() < 5) { // giới hạn 5 ptu
+            elements.add(element);
+        } else {
+            System.out.println("Cannot add more than 5 elements.");
+        }
     }
     // ER: Equivalent Resistance (Điện trở tương đương)
     public double calculateER() {
         double totalResistance = 0;
+        if (elements.isEmpty()) {
+        return 0; // trả về 0 nếu không có ptu nào trong mạch
+    }
         if (circuitType.equals("Serial")) {
             for (CircuitElement element : elements) {
                 totalResistance += element.getValue();
