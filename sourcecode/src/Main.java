@@ -1,8 +1,10 @@
-import circuit.Circuit;
-import elements.Capacitor;
-import elements.Inductor;
-import elements.Resistor;
-import simulator.CircuitAnalyzer;
+package src;
+
+import src.circuit.Circuit;
+import src.elements.Capacitor;
+import src.elements.Inductor;
+import src.elements.Resistor;
+import src.simulator.CircuitAnalyzer;
 
 public class Main {
     public static void main(String[] args) {
