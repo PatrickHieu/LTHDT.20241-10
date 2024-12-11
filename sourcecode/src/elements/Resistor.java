@@ -10,8 +10,14 @@ public class Resistor extends CircuitElement {
     public double calculateVoltage(double current) {
         return current * getValue(); // V = I * R
     }
+
     @Override
     public double calculateCurrent(double voltage) {
         return voltage / getValue(); // I = V / R
     }
+    @Override
+    public String toString() {
+    return "Resistor{name='" + getName() + "', resistance=" + getValue() + "}";
+}
+
 }
