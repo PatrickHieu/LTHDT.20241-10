@@ -1,8 +1,8 @@
 package src.elements;
 
 public abstract class CircuitElement {
-    protected final String name;
-    protected final double value;
+    private final String name;
+    private final double value; // Giá trị: resistance, capacitance, inductance
 
     public CircuitElement(String name, double value) {
         this.name = name;
@@ -18,5 +18,6 @@ public abstract class CircuitElement {
     }
 
     public abstract double calculateVoltage(double current);
+
     public abstract double calculateCurrent(double voltage);
 }
