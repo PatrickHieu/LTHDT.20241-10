@@ -5,6 +5,7 @@ import src.circuit.Circuit;
 import src.elements.Capacitor;
 import src.elements.Inductor;
 import src.elements.Resistor;
+import src.detect.DetectCircuit;
 
 public class CircuitSimulator {
     public static void runInteractiveMenu(Circuit serialCircuit, Circuit parallelCircuit) {
@@ -54,6 +55,10 @@ public class CircuitSimulator {
             case 2 -> addCapacitor(circuit, scanner);
             case 3 -> addInductor(circuit, scanner);
             default -> System.out.println("Invalid element choice. Try again.");
+        }
+
+        if (DetectCircuit.detectShortCircuit(circuit, circuitType)) {
+            System.out.println("Warning: Short Circuit detected! Please check the circuit.");
         }
     }
 
