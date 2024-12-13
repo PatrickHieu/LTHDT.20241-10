@@ -20,6 +20,8 @@ public class CircuitSimulator {
             System.out.println("4. Show Parallel Circuit");
             System.out.println("5. Analyze Serial Circuit");
             System.out.println("6. Analyze Parallel Circuit");
+            System.out.println("7. Clear Parallel Circuit");
+            System.out.println("8. Clear Parallel Circuit");
             System.out.println("0. Exit");
             System.out.print("Choose an option: ");
 
@@ -31,6 +33,8 @@ public class CircuitSimulator {
                 case 4 -> displayCircuitWithSubOptions(parallelCircuit, "Parallel", scanner);
                 case 5 -> CircuitAnalyzer.analyzeSerial(serialCircuit, sourceVoltage);
                 case 6 -> CircuitAnalyzer.analyzeParallel(parallelCircuit, sourceVoltage);
+                case 7 -> clearCircuit(serialCircuit, "Serial");
+                case 8 -> clearCircuit(parallelCircuit, "Parallel");
                 case 0 -> {
                     System.out.println("Exiting...");
                     scanner.close();
@@ -104,5 +108,10 @@ public class CircuitSimulator {
                 default -> System.out.println("Invalid option. Try again.");
             }
         }
+    }
+
+    public static void clearCircuit(Circuit circuit, String circuitType) {
+        circuit.clear();
+        System.out.println(circuitType + " Circuit has been cleared.");
     }
 }
