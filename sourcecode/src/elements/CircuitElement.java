@@ -20,4 +20,6 @@ public abstract class CircuitElement {
     public abstract double calculateVoltage(double current);
 
     public abstract double calculateCurrent(double voltage);
+
+    public abstract double calculateResistance(double frequency);
 }

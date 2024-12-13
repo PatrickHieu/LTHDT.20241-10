@@ -15,6 +15,12 @@ public class Resistor extends CircuitElement {
     public double calculateCurrent(double voltage) {
         return voltage / getValue(); // I = V / R
     }
+
+    @Override
+    public double calculateResistance(double frequency) {
+        return getValue();
+    }
+
     @Override
     public String toString() {
     return "Resistor{name='" + getName() + "', resistance=" + getValue() + "}";

@@ -17,10 +17,17 @@ public class Inductor extends CircuitElement {
         double frequency = 50;
         return voltage / (2 * Math.PI * frequency * getValue());
     }
+
+    @Override
+    public double calculateResistance(double frequency) {
+        if (frequency == 0) {
+            return 0; // Ngắn mạch với DC
+        }
+        return 2 * Math.PI * frequency * getValue(); // Z = 2πfL
+    }
+
     @Override
     public String toString() {
         return "Inductor{name='" + getName() + "', inductance=" + getValue() + "}";
     }
-
-
 }
