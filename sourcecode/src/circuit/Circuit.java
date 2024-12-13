@@ -160,7 +160,8 @@ public class Circuit {
     
 
     private String formatParallel(StringBuilder elements) {
-        if (elements.length() == 0) return "None";
+        if (elements.length() == 0)
+            return "None";
 
         String[] parts = elements.toString().split(" -> ");
         StringBuilder formatted = new StringBuilder("Source\n");
@@ -171,5 +172,9 @@ public class Circuit {
         }
         formatted.append(" |\nSource");
         return formatted.toString();
+    }
+    
+    public void clear() {
+        elements.clear();
     }
 }
