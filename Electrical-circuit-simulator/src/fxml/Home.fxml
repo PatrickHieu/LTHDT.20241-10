@@ -36,7 +36,7 @@
    </VBox>
    <ImageView fitHeight="84.0" fitWidth="200.0" pickOnBounds="true">
       <image>
-         <Image url="@logo2.png" />
+         <Image url="@images/logo2.png" />
       </image>
    </ImageView>
    <HBox alignment="CENTER_LEFT" layoutX="297.0" prefHeight="84.0" prefWidth="641.0">

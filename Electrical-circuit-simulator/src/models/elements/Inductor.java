@@ -1,4 +1,4 @@
-package src.elements;
+package models.elements;
 
 public class Inductor extends CircuitElement {
 
@@ -8,7 +8,7 @@ public class Inductor extends CircuitElement {
 
     @Override
     public double calculateVoltage(double current) {
-        double frequency = 50; 
+        double frequency = 50;
         return current * (2 * Math.PI * frequency * getValue());
     }
 

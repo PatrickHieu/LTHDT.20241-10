@@ -1,13 +1,13 @@
-package src.detect;
+package service;
 
-import src.circuit.Circuit;
-import src.elements.CircuitElement;
+import models.circuit.Circuit;
+import models.elements.CircuitElement;
 
 public class DetectCircuit {
-    
+
     public static boolean detectShortCircuit(Circuit circuit, String circuitType) {
         for (CircuitElement element : circuit.getElements()) {
-            if (element.calculateResistance(0) == 0) { 
+            if (element.calculateResistance(0) == 0) {
                 System.out.println(
                         "Short circuit detected at element " + element.getName() + " in " + circuitType + " Circuit!");
                 return true;

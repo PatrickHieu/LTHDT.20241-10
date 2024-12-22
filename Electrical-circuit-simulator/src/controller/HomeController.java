@@ -16,7 +16,6 @@ public class HomeController {
     @FXML
     private HBox hboxSerial;
 
-
     @FXML
     private void handleHBoxClick(MouseEvent event) throws Exception {
         FXMLLoader loader;

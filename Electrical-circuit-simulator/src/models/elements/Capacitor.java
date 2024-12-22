@@ -1,4 +1,4 @@
-package src.elements;
+package models.elements;
 
 public class Capacitor extends CircuitElement {
 
@@ -8,7 +8,7 @@ public class Capacitor extends CircuitElement {
 
     @Override
     public double calculateVoltage(double current) {
-        double frequency = 50; 
+        double frequency = 50;
         return current * (-1 / (2 * Math.PI * frequency * getValue()));
     }
 

@@ -1,4 +1,4 @@
-package src.elements;
+package models.elements;
 
 public class Resistor extends CircuitElement {
 
@@ -23,7 +23,6 @@ public class Resistor extends CircuitElement {
 
     @Override
     public String toString() {
-    return "Resistor{name='" + getName() + "', resistance=" + getValue() + "}";
-}
-
+        return "Resistor{name='" + getName() + "', resistance=" + getValue() + "}";
+    }
 }
