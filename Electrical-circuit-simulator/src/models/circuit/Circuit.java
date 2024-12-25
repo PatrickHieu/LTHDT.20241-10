@@ -1,17 +1,17 @@
-package src.circuit;
+package models.circuit;
 
 import java.util.ArrayList;
 import java.util.List;
-import src.elements.Capacitor;
-import src.elements.CircuitElement;
-import src.elements.Inductor;
-import src.elements.Resistor;
+import models.elements.Capacitor;
+import models.elements.CircuitElement;
+import models.elements.Inductor;
+import models.elements.Resistor;
 
 public class Circuit {
     private final List<CircuitElement> elements;
-    private final String circuitType;
+    private String circuitType = "";
 
-    public Circuit(String circuitType) {
+    public Circuit() {
         this.elements = new ArrayList<>();
         this.circuitType = circuitType;
     }
@@ -57,14 +57,14 @@ public class Circuit {
             double inverseCapacitance = 0;
             for (CircuitElement element : elements) {
                 if (element instanceof Capacitor) {
-                    inverseCapacitance += 1 / element.getValue(); 
+                    inverseCapacitance += 1 / element.getValue();
                 }
             }
             totalCapacitance = 1 / inverseCapacitance;
         } else if (circuitType.equals("Parallel")) {
             for (CircuitElement element : elements) {
                 if (element instanceof Capacitor) {
-                    totalCapacitance += element.getValue(); 
+                    totalCapacitance += element.getValue();
                 }
             }
         }
@@ -78,14 +78,14 @@ public class Circuit {
         if (circuitType.equals("Serial")) {
             for (CircuitElement element : elements) {
                 if (element instanceof Inductor) {
-                    totalInductance += element.getValue(); 
+                    totalInductance += element.getValue();
                 }
             }
         } else if (circuitType.equals("Parallel")) {
             double inverseInductance = 0;
             for (CircuitElement element : elements) {
                 if (element instanceof Inductor) {
-                    inverseInductance += 1 / element.getValue(); 
+                    inverseInductance += 1 / element.getValue();
                 }
             }
             totalInductance = 1 / inverseInductance;
@@ -98,11 +98,11 @@ public class Circuit {
 // Hiển thị sơ đồ mạch
         StringBuilder serialDiagram = new StringBuilder();
         StringBuilder parallelDiagram = new StringBuilder();
-    
+
         StringBuilder resistors = new StringBuilder();
         StringBuilder capacitors = new StringBuilder();
         StringBuilder inductors = new StringBuilder();
-    
+
         for (CircuitElement element : elements) {
             if (element instanceof Resistor) {
                 resistors.append(element.getName()).append(" -> ");
@@ -112,7 +112,7 @@ public class Circuit {
                 inductors.append(element.getName()).append(" -> ");
             }
         }
-    
+
         if (resistors.length() > 0) {
             resistors.append("Source");
         }
@@ -122,7 +122,7 @@ public class Circuit {
         if (inductors.length() > 0) {
             inductors.append("Source");
         }
-    
+
         if (circuitType.equals("Serial")) {
             serialDiagram.append("Show serial Resistor: ").append(resistors).append("\n");
             serialDiagram.append("Show serial Capacitor: ").append(capacitors).append("\n");
@@ -135,12 +135,12 @@ public class Circuit {
             System.out.println(parallelDiagram);
         }
     }
-    
+
     public void displayCircuitDiagram(String elementType) {
 
         StringBuilder diagram = new StringBuilder();
         diagram.append("Show ").append(circuitType).append(" ").append(elementType).append(":\n");
-    
+
         for (CircuitElement element : elements) {
             if (elementType.equals("Resistor") && element instanceof Resistor) {
                 diagram.append(element.getName()).append("\n");
@@ -150,14 +150,14 @@ public class Circuit {
                 diagram.append(element.getName()).append("\n");
             }
         }
-    
+
         if (diagram.toString().equals("Show " + circuitType + " " + elementType + ":\n")) {
             diagram.append("No ").append(elementType).append(" found.\n");
         }
-    
+
         System.out.println(diagram);
     }
-    
+
 
     private String formatParallel(StringBuilder elements) {
         if (elements.length() == 0)
@@ -173,7 +173,7 @@ public class Circuit {
         formatted.append(" |\nSource");
         return formatted.toString();
     }
-    
+
     public void clear() {
         elements.clear();
     }

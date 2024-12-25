@@ -1,4 +1,4 @@
-package src.elements;
+package models.elements;
 
 public abstract class CircuitElement {
     private final String name;

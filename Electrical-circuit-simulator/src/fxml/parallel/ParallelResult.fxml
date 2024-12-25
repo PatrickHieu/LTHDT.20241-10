@@ -17,13 +17,13 @@
             <children>
                 <HBox fx:id="ACController" prefHeight="100.0" prefWidth="200.0" visible="false">
                     <children>
-                        <fx:include fx:id="ACSource" source="../ACPowerSource.fxml" />
+                        <fx:include fx:id="ACSource" source="../components/ACPowerSource.fxml" />
                     </children>
                 </HBox>
 
                 <HBox fx:id="DCController" prefHeight="100.0" prefWidth="200.0" visible="false">
                     <children>
-                        <fx:include fx:id="DCSource" source="../DCPowerSource.fxml" />
+                        <fx:include fx:id="DCSource" source="../components/DCPowerSource.fxml" />
                     </children>
                 </HBox>
 

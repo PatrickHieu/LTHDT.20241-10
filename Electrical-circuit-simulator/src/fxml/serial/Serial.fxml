@@ -13,7 +13,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="648.0" prefWidth="936.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.serial.SerialController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="648.0" prefWidth="936.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.serial.SerialController">
     <VBox layoutX="294.0" layoutY="240.0" prefHeight="285.0" prefWidth="454.0">
         <VBox fx:id="elementContainer" prefHeight="285.0" prefWidth="454.0" spacing="10.0" />
     </VBox>
@@ -36,6 +36,14 @@
                   </font>
               </Label>
           </HBox>
+         <ImageView fitHeight="319.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@../images/logo.png" />
+            </image>
+            <VBox.margin>
+               <Insets top="50.0" />
+            </VBox.margin>
+         </ImageView>
       </children>
       <padding>
          <Insets left="10.0" />
@@ -98,4 +106,20 @@
          </Label>
       </children>
    </HBox>
+   <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+   <ImageView fitHeight="84.0" fitWidth="200.0" pickOnBounds="true">
+      <image>
+         <Image url="@images/logo2.png" />
+      </image>
+   </ImageView>
+   <ImageView fitHeight="150.0" fitWidth="291.0" layoutX="633.0" layoutY="157.0" pickOnBounds="true">
+      <image>
+         <Image url="@images/serial1.png" />
+      </image>
+   </ImageView>
+   <ImageView fitHeight="150.0" fitWidth="291.0" layoutX="634.0" layoutY="343.0" pickOnBounds="true">
+      <image>
+         <Image url="@images/serial2.png" />
+      </image>
+   </ImageView>
 </AnchorPane>

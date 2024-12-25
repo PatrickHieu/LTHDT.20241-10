@@ -1,11 +1,13 @@
-package src.simulator;
+package simulator;
 
 import java.util.Scanner;
-import src.circuit.Circuit;
-import src.elements.Capacitor;
-import src.elements.Inductor;
-import src.elements.Resistor;
-import src.detect.DetectCircuit;
+
+import service.CircuitAnalyzer;
+import models.circuit.Circuit;
+import models.elements.Capacitor;
+import models.elements.Inductor;
+import models.elements.Resistor;
+import service.DetectCircuit;
 
 public class CircuitSimulator {
     public static void runInteractiveMenu(Circuit serialCircuit, Circuit parallelCircuit) {
