@@ -10,14 +10,14 @@ import javafx.scene.input.MouseEvent;
 public class ParallelController extends CircuitController {
 
     public void changeCircuitScene(MouseEvent event) throws Exception {
-        super.changeCircuitScene(event, "/fxml/serial/Serial.fxml");
+        super.changeCircuitScene(event, "/views/serial/Serial.fxml");
     }
 
     public void handleSubmit() {
         try {
             super.handleSubmit();
             checkShortCircuit();
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/parallel/ParallelResult.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/views/parallel/ParallelResult.fxml"));
             Parent newRoot = loader.load();
 
             ParallelResultController controller = loader.getController();

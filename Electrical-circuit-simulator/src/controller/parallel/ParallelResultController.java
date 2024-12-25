@@ -1,7 +1,5 @@
 package controller.parallel;
 
-import java.util.List;
-
 import controller.CircuitResultController;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -12,7 +10,7 @@ public class ParallelResultController extends CircuitResultController {
 
     @FXML
     private void handleBackClick() throws Exception {
-        super.handleBackClick("/fxml/parallel/Parallel.fxml", this);
+        super.handleBackClick("/views/parallel/Parallel.fxml", this);
     }
 
     public void calculateComponentValues() {
