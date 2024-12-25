@@ -157,7 +157,7 @@ public abstract class CircuitResultController {
 
     @FXML
     private void handleHomeClick() throws Exception {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/Home.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/views/Home.fxml"));
         Parent newRoot = loader.load();
 
         Scene currentScene = btnHome.getScene();

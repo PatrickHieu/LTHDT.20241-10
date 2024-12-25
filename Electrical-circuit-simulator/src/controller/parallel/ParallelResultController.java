@@ -10,7 +10,7 @@ public class ParallelResultController extends CircuitResultController {
 
     @FXML
     private void handleBackClick() throws Exception {
-        super.handleBackClick("/view/parallel/Parallel.fxml", this);
+        super.handleBackClick("/views/parallel/Parallel.fxml", this);
     }
 
     public void calculateComponentValues() {
