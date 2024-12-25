@@ -10,7 +10,7 @@ public class SerialResultController extends CircuitResultController {
 
     @FXML
     private void handleBackClick() throws Exception {
-        super.handleBackClick("/fxml/serial/Serial.fxml", this);
+        super.handleBackClick("/view/serial/Serial.fxml", this);
     }
 
     public void updateComponentVisibility() {

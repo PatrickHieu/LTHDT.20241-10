@@ -20,9 +20,9 @@ public class HomeController {
     private void handleHBoxClick(MouseEvent event) throws Exception {
         FXMLLoader loader;
         if (event.getSource() == hboxParallel) {
-            loader = new FXMLLoader(getClass().getResource("/fxml/parallel/Parallel.fxml"));
+            loader = new FXMLLoader(getClass().getResource("/view/parallel/Parallel.fxml"));
         } else if (event.getSource() == hboxSerial) {
-            loader = new FXMLLoader(getClass().getResource("/fxml/serial/Serial.fxml"));
+            loader = new FXMLLoader(getClass().getResource("/view/serial/Serial.fxml"));
         } else {
             return;
         }
